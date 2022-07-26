@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: ruby-getting-started_development
+  host: db
+  username: ruby-getting-started
+  password: 120711
+  pool: 5
+
+test:
+  <<: *default
+  database: ruby-getting-started_test
+
+production:
+  <<: *default
+  database: ruby-getting-started_production
+  username: ruby-getting-started
+  password: <%= ENV['RUBY-GETTING-STARTED_DATABASE_PASSWORD'] %>

@@ -1,0 +1,24 @@
+<div class="row justify-content-center text-center">
+  <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+
+  <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+    <h2 class="mt-5 mb-5">Enter the Pokemon's name below</h2>
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control font_size" name="name" id="pokemon" placeholder="charizard">
+      <button class="btn btn-success" type="button" id="btn-pokemon">Buscar</button>
+    </div>
+
+    <p class="not-found"></p>
+
+    <div class="card-pokemon"></div>
+  </div>
+
+  <div class="col-4 col-sm-4 col-md-4 col-lg-4"></div>
+</div>
+
+<script>
+  j = 0;
+
+  get_pokemons(j);
+</script>

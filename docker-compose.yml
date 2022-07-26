@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: 'postgres:latest'
+    environment:
+      POSTGRES_USER: ruby-getting-started
+      POSTGRES_DB: ruby-getting-started_development
+      POSTGRES_PASSWORD: 120711
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+
+  pokeapi:
+    environment:
+      POKEAPI_URL: "https://pokeapi.co/api/v2/"
+    restart: always
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3008 -b '0.0.0.0'"
+    volumes:
+      - .:/pokeapi
+    ports:
+      - "3008:3008"
+    depends_on:
+      - db

@@ -1,0 +1,37 @@
+pt-BR:
+  pagination:
+    first: Primeiro
+    last: Ùltimo
+    next: Próximo
+    previous: Anterior
+
+  controller:
+    error_found: "Alguns erros foram encontrados, por favor verifique:"
+    fill_self_data: "Complete seus dados"
+    successfully_created: "Inclusão de %{model_name} realizada"
+    successfully_destroyed: "Exclusão de %{model_name} realizada"
+    successfully_updated: "Edição de %{model_name} realizada"
+    successfully_updated_self_data: "Seus dados foram atualizados"
+
+  view:
+    template:
+      email: E-mail
+      log_in: Entrar
+      log_out: Sair
+      name: Nome
+      password: Senha
+      password_confirmation: Confirmar senha
+      register: Cadastrar
+      remember_me: Lembrar-me
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: Não pode ficar em branco
+            password:
+              blank: Não pode ficar em branco
+            password_confirmation:
+              blank: Não pode ficar em branco
