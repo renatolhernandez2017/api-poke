@@ -16,10 +16,10 @@ services:
       POKEAPI_URL: "https://pokeapi.co/api/v2/"
     restart: always
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3008 -b '0.0.0.0'"
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/pokeapi
     ports:
-      - "3008:3008"
+      - "3000:3000"
     depends_on:
       - db
