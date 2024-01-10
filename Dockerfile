@@ -13,4 +13,6 @@ RUN bundle install
 COPY Gemfile.lock /pokeapi/Gemfile.lock
 COPY . /pokeapi
 
+EXPOSE 3000
+
 CMD sh start.sh
